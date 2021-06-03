@@ -1,4 +1,5 @@
 //jshint esversion:6
+const PORT = process.env.PORT || 5000;
 const express = require('express');
 const socket = require("socket.io");
 const mongoose = require('mongoose');
@@ -45,7 +46,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-const server = app.listen(3000);
+const server = app.listen(PORT);
 
 const dbURL = 'mongodb+srv://ugurhorasan:swulucho6@nodedeneme.nxnhj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose.connect(dbURL, {useNewUrlParser: true, useUnifiedTopology: true})

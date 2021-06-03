@@ -1,5 +1,6 @@
 //jshint esversion:6
-const socket = io.connect("http://localhost:3000");
+const PORT = process.env.PORT || 5000;
+const socket = io.connect("http://localhost:" + PORT);
 
 const message = document.getElementById("message");
 const submitBtn = document.getElementById("submitBtn");
