@@ -1,5 +1,5 @@
 //jshint esversion:6
-const PORT = process.env.PORT || 5000;
+var PORT = 5000;
 const socket = io.connect("http://localhost:" + PORT);
 
 const message = document.getElementById("message");
