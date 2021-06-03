@@ -49,7 +49,7 @@ app.use(passport.session());
 const server = app.listen(PORT);
 
 const dbURL = 'mongodb+srv://ugurhorasan:swulucho6@nodedeneme.nxnhj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-mongoose.connect(dbURL, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI || dbURL, {useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => console.log("Connection Established"))
   .catch((err) => console.log("Error: " + err));
 mongoose.set("useCreateIndex", true);
