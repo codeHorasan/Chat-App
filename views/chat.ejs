@@ -1,0 +1,48 @@
+<%- include('partials/chat-header') %>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+<div id="chat-wrap">
+  <h1 id="heading">Space Net</h1>
+  <h1 id="name"><%= name %></h1>
+  <h3 id="user"><%= user %></h3>
+
+  <script>
+    document.getElementById("user").style.display = "none";
+  </script>
+
+  <div id="chat-window">
+    <div id="active-users">
+      <h2>Active Users</h2>
+      <div id="users"></div>
+    </div>
+    <div id="output"></div>
+  </div>
+
+<div class="msgbtn">
+
+  <div class="msg">
+    <input type="text" id="message" placeholder="Enter Message">
+
+  </div>
+
+
+   <div class="sign_out">
+   <form action="/logout" method="GET">
+    <input type="submit" value="sign out"></input>
+  </form>
+  </div>
+
+  <div class="btn">
+
+
+    <button type="submit" id="submitBtn">Submit</button>
+  </div>
+
+
+  </div>
+</div>
+
+
+<script src="chat.js" charset="utf-8"></script>
+
+<%- include('partials/footer') %>

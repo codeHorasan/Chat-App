@@ -1,0 +1,73 @@
+<div class="container mt-5">
+ <header>
+<style>
+	body {
+	  background-color: #e9e9e9;
+	  font-family: tahoma;
+	  margin: 0;
+	  padding: 0;
+
+	}
+	.container{
+	margin-top: 50px;
+	margin-left: 50px;
+	}
+	.row{
+	border:1px solid black;
+	border-radius:10px;
+	padding-left:20px;
+	margin-right:1100px;
+	padding-bottom: 10px;
+	}
+	.form-group{
+	margin-bottom: 10px;
+	}
+	.form-control{
+	margin-left: 32px;}
+
+	.form-control2{
+	margin-left: 29px;}
+
+	.form-control3{
+	margin-left: 4px;}
+
+	.btn-dark{
+     margin-left: 175px;
+	  background-color:#3f729b;
+	 color: white;
+	}
+
+</style>
+</header>
+<body>
+
+  <div class="row">
+   <h1>Register</h1>
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control2" name="name">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control3" name="password">
+            </div>
+            <button type="submit" class="btn btn-dark">Register</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
