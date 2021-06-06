@@ -48,7 +48,7 @@ app.use(passport.session());
 
 const server = app.listen(PORT);
 
-const dbURL = 'mongodb+srv://ugurhorasan:swulucho6@nodedeneme.nxnhj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const dbURL = 'Fill-It';
 mongoose.connect(process.env.MONGODB_URI || dbURL, {useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => console.log("Connection Established"))
   .catch((err) => console.log("Error: " + err));
@@ -146,7 +146,7 @@ io.on('connection', function(socket) {
     io.sockets.emit("output-messages", result);
   });
 
-  socket.broadcast.emit("active", { email: email, name: name });
+  socket.broadcast.emit("active", { email: email, name: name, socket_id: socket.id });
 
   socket.on('active', data => {
     socket.broadcast.emit("active", data);
